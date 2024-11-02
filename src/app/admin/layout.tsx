@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import AdminWrapper from "./components/AdminWrapper";
+import AdminWrapper from "../../components/wrappers/AdminWrapper";
 
 export const metadata: Metadata = {
   title: "Insight",
@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
      <AdminWrapper>
-          {children}
+        {children}
      </AdminWrapper>
   );
 }
