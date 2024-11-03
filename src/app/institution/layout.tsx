@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import InstitutionWrapper from "@/components/wrappers/InstitutionWrapper";
 
 export const metadata: Metadata = {
   title: "Insight",
@@ -12,10 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="w-full h-full ">
+     <InstitutionWrapper>
         {children}
-      </body>
-    </html>
+     </InstitutionWrapper>
   );
 }
