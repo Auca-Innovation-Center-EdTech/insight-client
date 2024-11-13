@@ -1,10 +1,12 @@
 import React from 'react'
-
+import AdminPage from './components-c/InstitutionPage'
 const Page = () => {
      return (
-     <div>
-          we
-     </div>
+     <AdminPage>
+          <div>
+               
+          </div>
+     </AdminPage>
      )
 }
 

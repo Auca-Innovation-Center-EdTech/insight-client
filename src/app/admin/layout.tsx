@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AdminWrapper from "../../components/wrappers/AdminWrapper";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Insight",

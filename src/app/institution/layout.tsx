@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import InstitutionWrapper from "@/components/wrappers/InstitutionWrapper";
+import InstitutionWrapper from "../../components/wrappers/InstitutionWrapper";
+import React from "react";
+
 
 export const metadata: Metadata = {
   title: "Insight",

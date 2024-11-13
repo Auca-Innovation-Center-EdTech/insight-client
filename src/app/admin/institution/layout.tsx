@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import AdminPage from "../components/AdminPage";
 import Link from "next/link";
+import React from "react";
 export const metadata: Metadata = {
   title: "Insight",
   description: "Insight is an innovative Management Information System (MIS) launched to combat the growing issues of degree forgery.",

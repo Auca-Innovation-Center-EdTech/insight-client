@@ -1,6 +1,7 @@
 import ClientWrapper from "@/components/wrappers/ClientWrapper";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import { FaRegUser } from "react-icons/fa";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";

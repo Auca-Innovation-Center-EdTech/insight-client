@@ -1,6 +1,6 @@
 'use client'
 
-import { DateInputGroup, TextInputGroup } from '@/components/inputs/FormInputGroups'
+import { DateInputGroup, TextInputGroup } from '../../../components/inputs/FormInputGroups'
 
 import React from 'react'
 import { IoCloudUploadOutline } from 'react-icons/io5'
