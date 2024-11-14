@@ -23,7 +23,7 @@ const AdminNav = () => {
                     <NavLink name='Dashboard' dest='/institution' active={false} icon={<MdSpaceDashboard />} />
                     <NavLink name='Student' dest='/institution/Uploaddata' active={false} icon={<PiStudentBold />} />
                     {/* <NavLink name='Configuration' dest='/admin' active={false} icon={<MdSpaceDashboard />} /> */}
-                    <NavLink name='certificates' dest='/institution/' active={false} icon={<PiCertificateFill/>} />
+                    <NavLink name='certificates' dest='/institution/certificates' active={false} icon={<PiCertificateFill/>} />
                     <NavLink name='Upload data' dest='/institution/Uploaddata' active={false} icon={<TbReportSearch />} />
                     <NavLink name='Verification Request' dest='/institution/VerificationRequest' active={false} icon={<FaUpload />} />
                     <NavLink name='Notification ' dest='' active={false} icon={<GrDocumentVerified />} />
