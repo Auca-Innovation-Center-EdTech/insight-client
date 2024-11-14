@@ -12,6 +12,11 @@ interface IInputGroup {
   cb: (res: string | number) => unknown;
 }
 
+interface SelectInputGroupProps extends IInputGroup {
+  options: string[];
+  defaultOption?: string;
+}
+
 export const TextInputGroup: React.FC<IInputGroup> = ({ label, placeholder, id, cb, width = "100%" }) => {
   return (
     <div className={`${width} flex flex-col items-start gap-[5px]`}>
@@ -30,8 +35,7 @@ export const DateInputGroup: React.FC<IInputGroup> = ({ label, id, width = "100%
   );
 };
 
-// New SelectInputGroup component for dropdown
-export const SelectInputGroup: React.FC<IInputGroup & { options: string[] }> = ({ label, id, width = "100%", cb, options }) => {
+export const SelectInputGroup: React.FC<SelectInputGroupProps> = ({ label, id, width = "100%", cb, options, defaultOption  }) => {
   return (
     <div className={`${width} flex flex-col items-start gap-[5px]`}>
       <label className="text-[0.8rem] text-gray-700 font-semibold" htmlFor={id}>{label}</label>
@@ -41,7 +45,7 @@ export const SelectInputGroup: React.FC<IInputGroup & { options: string[] }> = (
         onChange={(e) => cb(e.target.value)}
         defaultValue=""
       >
-        <option value="" disabled>Select a field of study</option>
+        <option value="" disabled>{defaultOption}</option>
         {options.map((option, index) => (
           <option key={index} value={option}>{option}</option>
         ))}

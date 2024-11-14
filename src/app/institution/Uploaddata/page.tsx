@@ -10,17 +10,25 @@ const Page = () => {
         
         <TextInputGroup label='Name:' id="st-name-input" cb={(res) => { console.log(res); }} width='w-full md:w-[40%]' placeholder='EdTech University' />
         <TextInputGroup label='Address:' id="st-Address-input" cb={(res) => { console.log(res); }} width='w-full md:w-[40%]' placeholder='xyz@gmail.com' />
-        <TextInputGroup label='Degree:' id="st-Degree-input" cb={(res) => { console.log(res); }} width='w-full md:w-[40%]' placeholder='EU' />
+        <SelectInputGroup
+          label='Degree:'
+          id="st-degree-input"
+          cb={(res) => { console.log(res); }}
+          width='w-full md:w-[40%]'
+          options={['Undergraduate','graduate','Doctorate']}
+          defaultOption='Select type of degree'
+        />
         <TextInputGroup label='Phone Number:' id="st-number-input" cb={(res) => { console.log(res); }} width='w-full md:w-[40%]' placeholder='Miami, Kicukiro, Rwanda' />
         <DateInputGroup label='Completion Year:' id="st-completion-date-input" cb={(res) => { console.log(res); }} width='w-full md:w-[40%]' />
 
-        {/* Using the new SelectInputGroup component for the dropdown */}
+        
         <SelectInputGroup
           label='Field of Study:'
-          id="field-of-study-input"
+          id="st-fieldOfStudy-input"
           cb={(res) => { console.log(res); }}
           width='w-full md:w-[40%]'
           options={['Computer Science', 'Engineering', 'Business Administration', 'Education', 'Medicine']}
+          defaultOption='Select Field of study'
         />
 
         <div className='w-full flex items-center gap-[10px] justify-end mt-4'>
