@@ -1,9 +1,21 @@
-import { DateInputGroup, TextInputGroup } from '../../../components/inputs/FormInputGroups';
+'use client'
 import React from 'react';
 import { IoCloudUploadOutline } from 'react-icons/io5';
 import { BiSearch } from 'react-icons/bi';
+import { useState } from 'react';
 
 const Page = () => {
+  const [filter, setFilter] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFilter(e.target.value);
+  };
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+    
+  };
   return (
     <div className="flex w-full h-full ml-2">
       <div className="flex w-full flex-col items-center justify-start">
@@ -13,20 +25,27 @@ const Page = () => {
         <div className="flex w-full items-center gap-0">
       
       <div className="relative w-[150px]">
-        <BiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+        
         <input
           type="text"
           placeholder="Add filter"
+          value={filter}
+          onChange={handleFilterChange}
           className="bg-gray-100 text-gray-500 pl-10 pr-3 py-2 rounded-l-md border border-gray-300 w-full outline-none"
         />
       </div>
       
-      
+      <div className="relative w-[500px]">
+      <BiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
       <input
         type="text"
         placeholder="Search for a student by name or Student ID"
-        className="bg-gray-100 text-gray-500 px-3 py-2 w-full border border-gray-200 rounded-r-md outline-none"
+        value={searchTerm}
+        onChange={handleSearchChange}
+        className="bg-gray-100 text-gray-500 px-7 py-2 w-full border border-gray-200 rounded-r-md outline-none"
       />
+      </div>
+      
     </div>
 
           <div className="flex gap-3  ml-3 text-xs font-bold ">

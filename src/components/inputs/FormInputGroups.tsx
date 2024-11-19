@@ -17,7 +17,7 @@ interface SelectInputGroupProps extends IInputGroup {
   defaultOption?: string;
 }
 
-export const TextInputGroup: React.FC<IInputGroup> = ({ label, placeholder, id, cb, width = "100%" }) => {
+export const TextInputGroup: React.FC<IInputGroup> = ({ label, placeholder, id, cb, width = "150%" }) => {
   return (
     <div className={`${width} flex flex-col items-start gap-[5px]`}>
       <label className="text-[0.8rem] text-gray-700 font-semibold" htmlFor={id}>{label}</label>
